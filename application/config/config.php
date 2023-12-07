@@ -23,8 +23,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $config['base_url'] = 'https://masindestore.com/';
-$config['base_url'] = 'http://localhost/hekima-beauty/';
+$config['base_url'] = 'http://demo.masindestore.com/';
+// $config['base_url'] = 'http://localhost/hekima-beauty/';
 
 /*
 |--------------------------------------------------------------------------
