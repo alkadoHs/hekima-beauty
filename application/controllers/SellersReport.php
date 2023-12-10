@@ -42,7 +42,6 @@ class SellersReport extends CI_Controller
         $this->db->where("DATE(o.created_at)", date('Y-m-d'));
         $this->db->order_by('o.created_at', 'DESC');
         $query = $this->db->get();
-
         $result = $query->result_array();
 
         $orders = [];
@@ -175,6 +174,44 @@ class SellersReport extends CI_Controller
 
         // $orders = $this->db->where("DATE(createdAt) BETWEEN '$start_date' AND '$end_date' ")->get('order')->result();
         // var_dump([$orders]);
+    }
+
+
+    public function buying_price()
+    {
+
+$data['products'] = $this->db
+->select('UPPER(name) as name, buy_price')
+->get('product')
+->result();
+
+// echo "<pre>";
+// print_r($data);
+// exit();
+
+$this->load->view('reports/buying_price',$data );
+
+
+    }
+
+
+    public function print_buyprice()
+    {
+       
+        $data['products'] = $this->db
+    ->select('UPPER(name) as name, buy_price')
+    ->get('product')
+    ->result();
+
+    // echo "<pre>";
+    // print_r($data);
+    // exit();
+    
+        $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8','format' => 'A4-L','orientation' => 'L']);
+    $html = $this->load->view('reports/price_report',$data,true);
+        $mpdf->WriteHTML($html);
+        $mpdf->Output();
+
     }
 
 }

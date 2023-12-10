@@ -50,6 +50,13 @@
           <span class="ml-3">Dashboard</span>
         </a>
       </li>
+      <li>
+        <a href="<?= site_url('product/zeroproduct') ?>"
+          class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-barcode"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 7v10"/><path d="M12 7v10"/><path d="M17 7v10"/></svg>
+          <span class="ml-3">Empty Product</span>
+        </a>
+      </li>
 
       <li>
         <a href="<?= site_url('expense') ?>"
@@ -201,6 +208,10 @@
             <a href="<?= site_url('sellersReport') ?>"
               class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Sellers
               Reports</a>
+          </li>
+          <li>
+            <a href="<?= site_url('sellersReport/buying_price') ?>"
+              class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Stock buying Price</a>
           </li>
         </ul>
       </li>
