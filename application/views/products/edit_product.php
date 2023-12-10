@@ -17,21 +17,21 @@
                 <div>
                     <label for="buyPrice" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Buying
                         Price</label>
-                    <input type="number" name="buyPrice" id="buyPrice"
+                    <input type="number" name="buy_price" id="buyPrice"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500"
                         value="<?= $product->buy_price ?>" required="">
                 </div>
                 <div>
                     <label for="retailPrice" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Retail
                         Sale Price</label>
-                    <input type="number" name="retailPrice" id="retailPrice"
+                    <input type="number" name="retail_price" id="retailPrice"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500"
                         value="<?= $product->retail_price ?>" required="">
                 </div>
                 <div>
                     <label for="wholePrice" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Whole
                         Sale Price</label>
-                    <input type="number" name="wholePrice" id="wholePrice"
+                    <input type="number" name="whole_price" id="wholePrice"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500"
                         value="<?= $product->whole_price ?>" required="">
                 </div>
