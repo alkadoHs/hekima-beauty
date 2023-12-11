@@ -222,25 +222,21 @@
                                         <div>
                                             <label for="total"
                                                 class="block mb-2 text-sm font-medium text-gray-900">Total price</label>
-                                            <input type="number" readonly name="total" value="<?= $overAllPrice ?>"
+                                            <input type="number" readonly name="paid" value="<?= $overAllPrice ?>"
                                                 id="total"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400"
                                                 required>
                                         </div>
-                                        <div>
-                                            <label for="paid"
-                                                class="block mb-2 text-sm font-medium text-gray-900">Amount paid</label>
-                                            <input type="number" value="<?= $overAllPrice ?>" name="paid" id="paid"
-                                            <input type="text" class="bg-gray-50 border border-red-500 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400" required>
-
-                                        </div>
 
                                         <div>
-                                            <label for="customerId"
-                                                class="block mb-2 text-sm font-medium text-gray-900">Customer
-                                                Name</label>
-                                            <input type="text" name="customerId" id="customerId"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400">
+                                            <label for="payment_method"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Payment Method</label>
+                                            <select id="payment_method" name="payment_method"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500"
+                                            required>
+                                                <option value="CASH">CASH</option>
+                                                <option value="LIPA">LIPA</option>
+                                            </select>
                                         </div>
 
                                         <button type="submit"

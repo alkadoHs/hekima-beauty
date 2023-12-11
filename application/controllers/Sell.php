@@ -135,6 +135,7 @@ class Sell extends CI_Controller
             "id" => $orderId,
             "user_id" => $userId,
             "amountPaid" => $this->input->post('paid'),
+            "payment_method" => $this->input->post('payment_method'),
         ];
 
         $this->db->trans_start();
@@ -150,9 +151,15 @@ class Sell extends CI_Controller
             $this->db->update('product', ['inventory' => $newInventory], ['id' => $product->id]);
         }
 
-        $this->db->set('total', 'total + ' . $data['amountPaid'], false);
-        $this->db->where('branchId', 1);
-        $this->db->update('sales');
+        if($data['payment_method'] == 'CASH') {
+            $this->db->set('total', 'total + ' . $data['amountPaid'], false);
+            $this->db->where('branchId', 1);
+            $this->db->update('sales');
+        } else {
+            $this->db->set('total', 'total + ' . $data['amountPaid'], false);
+            $this->db->where('branchId', 2);
+            $this->db->update('sales');
+        }
 
         $this->db->delete('cart', ['id' => $cart_id]);
         $this->db->trans_complete();

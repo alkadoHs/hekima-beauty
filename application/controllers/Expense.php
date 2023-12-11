@@ -22,12 +22,11 @@ class Expense extends CI_Controller
     public function create()
     {
         $userId = $this->session->userdata("userId");
-        $branchId = $this->session->userdata("branchId");
         $datas = [
-            ['userId' => $userId, 'description' => $this->input->post('description1'), 'amount' => $this->input->post('amount1')],
-            ['userId' => $userId, 'description' => $this->input->post('description2'), 'amount' => $this->input->post('amount2')],
-            ['userId' => $userId, 'description' => $this->input->post('description3'), 'amount' => $this->input->post('amount3')],
-            ['userId' => $userId, 'description' => $this->input->post('description4'), 'amount' => $this->input->post('amount4')],
+            ['userId' => $userId, 'description' => $this->input->post('description1'), 'amount' => $this->input->post('amount1'), 'account' => $this->input->post('account')],
+            ['userId' => $userId, 'description' => $this->input->post('description2'), 'amount' => $this->input->post('amount2'), 'account' => $this->input->post('account')],
+            ['userId' => $userId, 'description' => $this->input->post('description3'), 'amount' => $this->input->post('amount3'), 'account' => $this->input->post('account')],
+            ['userId' => $userId, 'description' => $this->input->post('description4'), 'amount' => $this->input->post('amount4'), 'account' => $this->input->post('account')],
         ];
 
 
@@ -36,9 +35,16 @@ class Expense extends CI_Controller
             if (!$data['description'] || !$data['amount']) {
                 continue;
             }
-            $this->db->set('total', 'total - ' . $data['amount'], false);
-            $this->db->where('branchId', 1);
-            $this->db->update('sales');
+
+            if($data['account'] == "CASH") {
+                $this->db->set('total', 'total - ' . $data['amount'], false);
+                $this->db->where('branchId', 1);
+                $this->db->update('sales');
+            } else {
+                $this->db->set('total', 'total - ' . $data['amount'], false);
+                $this->db->where('branchId', 2);
+                $this->db->update('sales');
+            }
 
             $this->db->insert("expense", $data);
         }

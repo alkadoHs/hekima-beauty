@@ -5,7 +5,7 @@
   aria-label="Sidenav" id="drawer-navigation">
   <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-gray-800">
     <ul class="space-y-2">
-
+     <?php if($role == 'ADMIN'):?>
       <li>
         <a href="<?= site_url('dashboard') ?>"
           class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -18,6 +18,7 @@
           <span class="ml-3">Admin dashboard</span>
         </a>
       </li>
+      <?php endif?>
 
       <li>
         <a href="<?= site_url('sell') ?>"
@@ -73,6 +74,7 @@
           <span class="ml-3">My Expenses</span>
         </a>
       </li>
+      <?php if($role == "ADMIN"):?>
       <li>
         <a href="<?= site_url('user/register_index') ?>"
           class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -215,7 +217,7 @@
           </li>
         </ul>
       </li>
-
+    <?php endif?>
     </ul>
 
   </div>
