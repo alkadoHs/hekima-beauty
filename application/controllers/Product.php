@@ -52,7 +52,7 @@ class Product extends CI_Controller
             'retail_price' => $this->input->post('retail_price'),
             'whole_price' => $this->input->post('whole_price'),
             'quantity' => $this->input->post('quantity'),
-            'stockLimit' => $this->input->post('stock_limit'),
+            'stock_limit' => $this->input->post('stockLimit'),
         ];
 
         $this->db->replace('product', $input_data);
