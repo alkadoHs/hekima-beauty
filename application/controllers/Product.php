@@ -41,7 +41,7 @@ class Product extends CI_Controller
 
     }
 
-    
+
 
     public function update()
     {
@@ -51,6 +51,8 @@ class Product extends CI_Controller
             'buy_price' => $this->input->post('buy_price'),
             'retail_price' => $this->input->post('retail_price'),
             'whole_price' => $this->input->post('whole_price'),
+            'quantity' => $this->input->post('quantity'),
+            'stockLimit' => $this->input->post('stock_limit'),
         ];
 
         $this->db->replace('product', $input_data);
@@ -68,20 +70,20 @@ class Product extends CI_Controller
     }
 
     public function zeroproduct()
-
     {
-        $date = date("Y-m-d");;
+        $date = date("Y-m-d");
+        ;
         $empty['nothing'] = $this->db->select('name, inventory,buy_price,updated_at')
-        ->from('product')
-        ->where('updated_at >=', $date)
-        ->where('inventory', 0)
-        ->get()
-        ->result();
-    // echo "<pre>";
-    // print_r($empty);
-    // exit();
-        
-    $this->load->view('products/empty', $empty);
+            ->from('product')
+            ->where('updated_at >=', $date)
+            ->where('inventory', 0)
+            ->get()
+            ->result();
+        // echo "<pre>";
+        // print_r($empty);
+        // exit();
+
+        $this->load->view('products/empty', $empty);
 
     }
 }
