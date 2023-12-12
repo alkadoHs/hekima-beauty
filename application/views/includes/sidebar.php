@@ -175,7 +175,7 @@
               Products</a>
           </li>
           <li>
-            <a href="<?= site_url('branchProducts/index/1') ?>"
+            <a href="<?= site_url('product/new_stock') ?>"
               class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">New
               Stock</a>
           </li>
@@ -214,6 +214,10 @@
           <li>
             <a href="<?= site_url('sellersReport/buying_price') ?>"
               class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Stock buying Price</a>
+          </li>
+          <li>
+            <a href="<?= site_url('sellersReport/top_selling') ?>"
+              class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Top Selling</a>
           </li>
         </ul>
       </li>

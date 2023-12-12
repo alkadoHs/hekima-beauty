@@ -15,6 +15,42 @@ class Product extends CI_Controller
         $this->load->view('products/add_product', ['products' => $products]);
     }
 
+    public function new_stock()
+    {
+        $userId = $this->session->userdata("userId");
+
+        if (empty($userId)) {
+            return redirect("login");
+        }
+
+        $products = $this->db->get('product')->result();
+        $this->load->view('products/new_stock', ['products' => $products]);
+    }
+
+
+    public function add_new_stock()
+    {
+        $userId = $this->session->userdata("userId");
+
+        if (empty($userId)) {
+            return redirect("login");
+        }
+
+        $product_id = $this->input->post('id');
+        $newStock = $this->input->post('new_stock');
+
+        $product = $this->db->get_where('product', ['id' => $product_id])->row();
+        $quantity = $newStock + $product->inventory;
+
+        $this->db->update('product', ['new_stock' => $newStock, 'quantity' => $quantity, 'inventory' => $quantity], ['id' => $product_id]);
+
+        $this->session->set_flashdata('new_stock_added', 'New stock added successfully!');
+
+        redirect('product/new_stock');
+        
+    }
+
+
     public function create()
     {
         $input_data = [

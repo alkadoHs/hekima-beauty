@@ -1668,6 +1668,18 @@ input:checked + .toggle-bg {
   max-width: 1280px;
 }
 
+.max-w-\[40px\] {
+  max-width: 40px;
+}
+
+.max-w-\[60px\] {
+  max-width: 60px;
+}
+
+.max-w-\[80px\] {
+  max-width: 80px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2037,11 +2049,6 @@ input:checked + .toggle-bg {
   border-color: rgb(248 180 180 / var(--tw-border-opacity));
 }
 
-.border-red-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(240 82 82 / var(--tw-border-opacity));
-}
-
 .border-red-600 {
   --tw-border-opacity: 1;
   border-color: rgb(224 36 36 / var(--tw-border-opacity));
@@ -2065,11 +2072,6 @@ input:checked + .toggle-bg {
 .border-slate-400 {
   --tw-border-opacity: 1;
   border-color: rgb(148 163 184 / var(--tw-border-opacity));
-}
-
-.border-slate-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(71 85 105 / var(--tw-border-opacity));
 }
 
 .bg-blue-50 {
@@ -2640,6 +2642,21 @@ input:checked + .toggle-bg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(63 131 248 / var(--tw-text-opacity));
+}
+
+.text-yellow-600 {
+  --tw-text-opacity: 1;
+  color: rgb(159 88 10 / var(--tw-text-opacity));
+}
+
+.text-violet-500 {
+  --tw-text-opacity: 1;
+  color: rgb(139 92 246 / var(--tw-text-opacity));
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2818,11 +2835,6 @@ input:checked + .toggle-bg {
   border-color: rgb(63 131 248 / var(--tw-border-opacity));
 }
 
-.focus\:border-red-500:focus {
-  --tw-border-opacity: 1;
-  border-color: rgb(240 82 82 / var(--tw-border-opacity));
-}
-
 .focus\:border-sky-500:focus {
   --tw-border-opacity: 1;
   border-color: rgb(14 165 233 / var(--tw-border-opacity));
@@ -2896,11 +2908,6 @@ input:checked + .toggle-bg {
 .focus\:ring-red-300:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(248 180 180 / var(--tw-ring-opacity));
-}
-
-.focus\:ring-red-500:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(240 82 82 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-sky-300:focus {

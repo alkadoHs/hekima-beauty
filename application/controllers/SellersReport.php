@@ -211,6 +211,20 @@ class SellersReport extends CI_Controller
         $mpdf->WriteHTML($html);
         $mpdf->Output();
 
-    }
+}
+
+public function top_selling()
+{
+        //best selling products
+        $top_products = $this->db->select("p.name, SUM(oi.quantity) as quantity")
+            ->from('order_item oi')
+            ->join('product p', 'oi.product_id = p.id')
+            ->group_by('oi.product_id')
+            ->order_by('quantity', 'DESC')
+            ->limit(10)
+            ->get()->result();
+        $this->load->view('reports/top_selling', ['products' => $top_products]);
+        
+}
 
 }
