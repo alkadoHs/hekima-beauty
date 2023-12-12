@@ -72,7 +72,9 @@ class Dashboard extends CI_Controller
       ->get()->result();
 
 
-    $balance = $this->db->get('sales')->row();
+    $balance = $this->db->get_where('sales', ['branchId' => 1])->row();
+    $lipa_balance = $this->db->get_where('sales', ['branchId' => 2])->row();
+  
 
 
     // echo "<pre>";
@@ -92,6 +94,7 @@ class Dashboard extends CI_Controller
       "top_products" => $top_products,
 
       "balance" => $balance->total,
+      "lipa" => $lipa_balance->total,
     ];
 
     $this->load->view('dashboard', $data);

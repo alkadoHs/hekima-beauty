@@ -3,9 +3,9 @@
 
 <main class="py-4 px-2 lg:px-4 md:ml-64 h-auto pt-20 grid gap-5">
   
-     <h3 class="text-gray-600 text-xl font-semibold">Admin Dashboard</h3>
-  <section class="grid grid-cols-2 gap-4">
-     <div class="w-full flex items-center border border-slate-200 rounded shadow">
+  <h3 class="text-gray-600 text-xl font-semibold">Admin Dashboard</h3>
+  <section class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="w-full col-span-2 lg:col-span-1 flex items-center border border-slate-200 rounded shadow">
       <div class="p-4">
         <p class="text-slate-500">General Stock</p>
         <div>
@@ -25,10 +25,20 @@
     
     <div class="flex items-center border border-slate-200 rounded shadow">
       <div class="p-4">
-        <p class="text-slate-500">Balance</p>
+        <p class="text-slate-500">Cash Balance</p>
         <div>
           <p class="text-gray-700 text-xl font-semibold">
             <?= number_format($balance) ?>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center border border-slate-200 rounded shadow">
+      <div class="p-4">
+        <p class="text-slate-500">Lipa Balance</p>
+        <div>
+          <p class="text-gray-700 text-xl font-semibold">
+            <?= number_format($lipa) ?>
           </p>
         </div>
       </div>
