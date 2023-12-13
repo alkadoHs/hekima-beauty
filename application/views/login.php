@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="<?php echo base_url("assets/css/styles.css") ?>">
     <style>
         body {
+            width: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-image: url("<?= base_url('assets/images/logi-bg.jpg') ?>") !important;
             background-repeat: no-repeat;
             background-size: cover;
