@@ -21,7 +21,7 @@
 
 <body>
     <section class="bg-transparent">
-        <div class="flex bg-transparent flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div class="flex bg-transparent flex-col items-center justify-center px-6 py-8 lg:py-0">
             <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="mr-2 w-8 h-8 text-rose-600 animate-pulse">
