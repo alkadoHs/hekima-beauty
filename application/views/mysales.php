@@ -152,7 +152,7 @@ foreach ($orders as $order) {
                         </button>
                     </h2>
                     <div id="accordion-arrow-icon<?= $order['id'] ?>" class="hidden" aria-labelledby="<?= $order['id'] ?>">
-                        <div class="p-5 border overflow-auto max-h-80 border-t-0 border-gray-200 dark:border-gray-700">
+                        <div class="p-5 border overflow-auto whitespace-nowrap max-h-80 border-t-0 border-gray-200 dark:border-gray-700">
                             <table>
                                 <thead>
                                     <tr>

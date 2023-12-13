@@ -1320,10 +1320,6 @@ input:checked + .toggle-bg {
   z-index: 50;
 }
 
-.col-span-1 {
-  grid-column: span 1 / span 1;
-}
-
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -3310,10 +3306,6 @@ input:checked + .toggle-bg {
     inset: 0px;
   }
 
-  .md\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
   .md\:mb-0 {
     margin-bottom: 0px;
   }
@@ -3352,10 +3344,6 @@ input:checked + .toggle-bg {
 
   .md\:h-full {
     height: 100%;
-  }
-
-  .md\:h-screen {
-    height: 100vh;
   }
 
   .md\:w-1\/2 {
@@ -3427,16 +3415,8 @@ input:checked + .toggle-bg {
     order: 2;
   }
 
-  .lg\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-
   .lg\:col-span-1 {
     grid-column: span 1 / span 1;
-  }
-
-  .lg\:grid {
-    display: grid;
   }
 
   .lg\:grid-cols-3 {

@@ -230,10 +230,11 @@
 
                                         <div>
                                             <label for="payment_method"
-                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Payment Method</label>
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Payment
+                                                Method</label>
                                             <select id="payment_method" name="payment_method"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500"
-                                            required>
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-sky-500 dark:focus:border-sky-500"
+                                                required>
                                                 <option value="CASH">CASH</option>
                                                 <option value="LIPA">LIPA</option>
                                             </select>
@@ -252,7 +253,7 @@
             </div>
 
 
-            <table id="example" class="display" style="width:100%">
+            <table id="example" class="display whitespace-nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th style="font-weight: 400; font-size: small">S/N</th>

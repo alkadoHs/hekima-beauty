@@ -85,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto whitespace-nowrap">
                 <table class="display" id="example">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>

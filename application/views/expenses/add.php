@@ -87,7 +87,7 @@
                          <h2 class="text-xl font-bold text-white my-3 px-3">This Month Expenses</h2>
                             
                         </div>
-                        <div class="overflow-x-auto">
+                        <div class="overflow-x-auto whitespace-nowrap">
                             <table id="productTable" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                     <tr>

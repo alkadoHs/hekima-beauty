@@ -115,7 +115,7 @@
                 </div>
             <?php endif; ?>
             
-            <table id="example" class="display" style="width:100%">
+            <table id="example" class="display whitespace-nowrap" style="width:100%">
                 <thead>
                     <tr>
                         <th style="font-weight: 400; font-size: small">S/N</th>
